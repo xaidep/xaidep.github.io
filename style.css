@@ -8,12 +8,9 @@ body {
   background-attachment: fixed; 
 
   }
-.menubar{
-    border: 0;　/* 枠がついてしまうので0にします。 */
-    height: 50px;　/* 画像の高さに合わせました。 */
-    background:url("img/hr_mizuiro.png");
-    margin: 20px 0px 0px 0px;
-}
+p.sample1 {word-spacing: 1em}
+p.example2 { letter-spacing: 5em; }
+
 
 .hr_mizuiro {
   display: block;
