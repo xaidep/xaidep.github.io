@@ -1,5 +1,0 @@
-# zaki
-
-##メンバー
-
-*testmember
