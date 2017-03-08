@@ -1,0 +1,124 @@
+<!DOCTYPEhtml>
+
+
+<html>
+
+
+<head>
+    <mata charset="utf-8">
+    <link href="button.css" rel="stylesheet" type="text/css" media="all"><!--cssリンク読み込み-->
+   
+</head>
+
+
+
+
+<div class="zabu1"><!--画像を重ねる-->
+<img src="img/waku1.png" alt="" /><!--座布団-->
+<img name="ru"　alt="" class="kazu1" /><!--ルーレットの数字-->
+</div>
+
+<div class="zabu2"><!--画像を重ねる-->
+<img src="img/waku1.png" alt="" /><!--座布団-->
+<img name="ru2"　alt="" class="kazu2" /><!--ルーレットの数字-->
+</div>
+
+<div class="zabu3"><!--画像を重ねる-->
+<img src="img/waku1.png" alt="" /><!--座布団-->
+<img name="ru3"　alt="" class="kazu3" /><!--ルーレットの数字-->
+</div>
+
+<script type="text/javascript">
+img = new Array("img/img1.png","img/img2.png","img/img3.png","img/img4.png","img/img5.png","img/img6.png","img/img7.png","img/img8.png","img/img9.png"); //*読み込む画像を全部指定する。
+
+
+
+count = -1; //*2
+imgTimer();
+var timer1
+var rure=0
+function imgTimer() {
+	
+	
+	//画像番号
+	count++; //画像番号を加算
+	//画像の枚数確認
+	if (count == img.length) count = 0; //countの数が画像枚数と同じになったら０になる
+	//画像出力
+	document.ru.src = img[count]; //*5
+	//次のタイマー呼びだし
+	timer1 = setTimeout("imgTimer()",10); //*6
+
+	
+}
+
+
+count2 = -1; //*2
+imgTimer2();
+var timer2
+function imgTimer2() {
+	//画像番号
+	count2++; //画像番号を加算
+	//画像の枚数確認
+	if (count2 == img.length) count2 = 0; //countの数が画像枚数と同じになったら０になる
+	//画像出力
+	document.ru2.src = img[count2]; //*5
+	//次のタイマー呼びだし
+	 timer2 = setTimeout("imgTimer2()",10); //*6
+
+}
+
+
+
+count3 = -1; //*2
+imgTimer3();
+var timer3 
+function imgTimer3() {
+	//画像番号
+	count3++; //画像番号を加算
+	//画像の枚数確認
+	if (count3 == img.length) count3 = 0; //countの数が画像枚数と同じになったら０になる
+	//画像出力
+	document.ru3.src = img[count3]; //*5
+	//次のタイマー呼びだし
+	timer3 = setTimeout("imgTimer3()",10); //*6
+}
+
+function bo1() {//ボタンを押したときの処理
+	   
+		clearTimeout(timer1);//setTimeoutの処理を止める（数字のループを止める）
+}
+
+function bo2() {//ボタンを押したときの処理
+	
+		clearTimeout(timer2);
+}
+function bo3() {//ボタンを押したときの処理
+	
+		clearTimeout(timer3);
+}
+
+
+</script>
+
+
+
+ <body bgcolor="#ffda00"><!--BG色指定-->
+
+
+
+　<div class="button_wrapper" ><!--ボタンセンタリング-->
+ <input class="button" type="button"  value="stop1" onClick="bo1();"><!--ボタン-->
+ <input class="button" type="button"  value="stop2" onClick="bo2();"><!--ボタン-->
+ <input class="button" type="button"  value="stop3" onClick="bo3();"><!--ボタン-->
+
+
+
+
+ </div>
+
+
+</html>
+
+
+
