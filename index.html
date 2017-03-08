@@ -5,7 +5,7 @@
 
 
 <head>
-	
+
     <mata charset="utf-8">
 
     <link href="button.css" rel="stylesheet" type="text/css" media="all"><!--cssリンク読み込み-->
@@ -32,14 +32,23 @@
 </div>
 
 <script type="text/javascript">
+
+
+
 img = new Array("img/img1.png","img/img2.png","img/img3.png","img/img4.png","img/img5.png","img/img6.png","img/img7.png","img/img8.png","img/img9.png"); //*読み込む画像を全部指定する。
 
-
-
-count = -1; //*2
+function bo4() {//
 imgTimer();
+imgTimer2();
+imgTimer3();
+}
+
+count = -1; 
+
 var timer1
-var rure=0
+
+
+
 function imgTimer() {
 	
 	
@@ -57,7 +66,7 @@ function imgTimer() {
 
 
 count2 = -1; //*2
-imgTimer2();
+
 var timer2
 function imgTimer2() {
 	//画像番号
@@ -74,7 +83,7 @@ function imgTimer2() {
 
 
 count3 = -1; //*2
-imgTimer3();
+
 var timer3 
 function imgTimer3() {
 	//画像番号
@@ -102,6 +111,7 @@ function bo3() {//ボタンを押したときの処理
 }
 
 
+
 </script>
 
 
@@ -114,7 +124,9 @@ function bo3() {//ボタンを押したときの処理
  <input class="button" type="button"  value="stop1" onClick="bo1();"><!--ボタン-->
  <input class="button" type="button"  value="stop2" onClick="bo2();"><!--ボタン-->
  <input class="button" type="button"  value="stop3" onClick="bo3();"><!--ボタン-->
-
+ </div>
+ 　<div class="button_wrapper" ><!--ボタンセンタリング-->
+ <input class="button" type="button"  value="         スタート         " onClick="bo4();"><!--ボタン-->
 
 
 
