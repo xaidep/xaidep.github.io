@@ -1,98 +1,150 @@
-<!DOCTYPE html>
+<!DOCTYPEhtml>
+
+
 <html>
+
+
 <head>
-<meta charset="UTF-8">
-<title>CreateJS export from 宇宙ダーツ</title>
 
-<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
-<script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
-<script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
-<script src="uuu.js"></script>
+    <mata charset="utf-8">
 
-<script>
-var canvas, stage, exportRoot;
+    <link href="button.css" rel="stylesheet" type="text/css" media="all"><!--cssリンク読み込み-->
 
-function init() {
-	canvas = document.getElementById("canvas");
-	exportRoot = new lib.宇宙ダーツ();
-
-	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);
-	stage.update();
-	stage.enableMouseOver();
-
-	createjs.Ticker.setFPS(24);
-	createjs.Ticker.addEventListener("tick", stage);
-}
-
-(function (lib, img, cjs) {
-
-var p; // shortcut to reference prototypes
-
-// stage content:
-(lib.宇宙ダーツ = function() {
-	this.initialize();
-
-	// レイヤー 2
-	this.btnMc = new lib.botan();
-	this.btnMc.setTransform(260.5,357.5,1,1,0,0,0,38.5,38.5);
-	new cjs.ButtonHelper(this.btnMc, 0, 1, 1);
-
-	// レイヤー 1
-	this.sikaku = new lib.aaaaa();
-	this.sikaku.setTransform(58,58,1,1,0,0,0,53,53);
-
-	this.addChild(this.sikaku,this.btnMc);
-}).prototype = p = new cjs.Container();
-p.nominalBounds = new cjs.Rectangle(5,5,294.1,391);
-
-
-// symbols:
-(lib.botan = function() {
-	this.initialize();
-
-	// レイヤー 1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#00CC33").s().p("AkPEPQhwhwgBifQABieBwhxQBxhwCegBQCfABBwBwQBxBxABCeQgBCfhxBwQhwBxifABQiegBhxhxg");
-	this.shape.setTransform(38.5,38.5);
-
-	this.addChild(this.shape);
-}).prototype = p = new cjs.Container();
-p.nominalBounds = new cjs.Rectangle(0,0,77,77);
-
-
-(lib.aaaa = function() {
-	this.initialize();
-
-	// レイヤー 1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AoRISIAAwjIQjAAIAAQjg");
-	this.shape.setTransform(53,53);
-
-	this.addChild(this.shape);
-}).prototype = p = new cjs.Container();
-p.nominalBounds = new cjs.Rectangle(0,0,106,106);
-
-
-(lib.aaaaa = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{go:1});
-
-	// レイヤー 1
-	this.instance = new lib.aaaa();
-	this.instance.setTransform(53,53,1,1,0,0,0,53,53);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:485},12).to({x:53},12).wait(1));
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,106,106);
-
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
-</script>
-
+   
 </head>
 
-<body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="550" height="400" style="background-color:#ffffff"></canvas>
-</body>
+
+
+
+<div class="zabu1"><!--画像を重ねる-->
+<img src="img/waku1.png" alt="" /><!--座布団-->
+<img name="ru"　alt="" class="kazu1" /><!--ルーレットの数字-->
+</div>
+
+<div class="zabu2"><!--画像を重ねる-->
+<img src="img/waku1.png" alt="" /><!--座布団-->
+<img name="ru2"　alt="" class="kazu2" /><!--ルーレットの数字-->
+</div>
+
+<div class="zabu3"><!--画像を重ねる-->
+<img src="img/waku1.png" alt="" /><!--座布団-->
+<img name="ru3"　alt="" class="kazu3" /><!--ルーレットの数字-->
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+img = new Array("img/img1.png","img/img2.png","img/img3.png","img/img4.png","img/img5.png","img/img6.png","img/img7.png","img/img8.png","img/img9.png"); //*読み込む画像を全部指定する。
+
+var bota1=false
+function bo4() {//スタートボタンを押したらルーレット回る
+
+if(var bota1 == false){
+imgTimer();
+imgTimer2();
+imgTimer3();
+}
+ }
+
+
+count = -1; 
+
+var timer1
+
+
+
+function imgTimer() {
+	
+	
+	//画像番号
+	count++; //画像番号を加算
+	//画像の枚数確認
+	if (count == img.length) count = 0; //countの数が画像枚数と同じになったら０になる
+	//画像出力
+	document.ru.src = img[count]; //*5
+	//次のタイマー呼びだし
+	timer1 = setTimeout("imgTimer()",10); //*6
+
+	
+}
+
+
+count2 = -1; //*2
+
+var timer2
+function imgTimer2() {
+	//画像番号
+	count2++; //画像番号を加算
+	//画像の枚数確認
+	if (count2 == img.length) count2 = 0; //countの数が画像枚数と同じになったら０になる
+	//画像出力
+	document.ru2.src = img[count2]; //*5
+	//次のタイマー呼びだし
+	 timer2 = setTimeout("imgTimer2()",10); //*6
+
+}
+
+
+
+count3 = -1; //*2
+
+var timer3 
+function imgTimer3() {
+	//画像番号
+	count3++; //画像番号を加算
+	//画像の枚数確認
+	if (count3 == img.length) count3 = 0; //countの数が画像枚数と同じになったら０になる
+	//画像出力
+	document.ru3.src = img[count3]; //*5
+	//次のタイマー呼びだし
+	timer3 = setTimeout("imgTimer3()",10); //*6
+}
+
+function bo1() {//ボタンを押したときの処理
+	   
+		clearTimeout(timer1);//setTimeoutの処理を止める（数字のループを止める）
+}
+
+function bo2() {//ボタンを押したときの処理
+	
+		clearTimeout(timer2);
+}
+function bo3() {//ボタンを押したときの処理
+	
+		clearTimeout(timer3);
+}
+
+
+
+</script>
+
+
+
+ <body bgcolor="#ffda00"><!--BG色指定-->
+
+
+
+　<div class="button_wrapper" ><!--ボタンセンタリング-->
+ <input class="button" type="button"  value="stop1" onClick="bo1();"><!--ボタン-->
+ <input class="button" type="button"  value="stop2" onClick="bo2();"><!--ボタン-->
+ <input class="button" type="button"  value="stop3" onClick="bo3();"><!--ボタン-->
+ </div>
+ 　<div class="button_wrapper" ><!--ボタンセンタリング-->
+ <input class="button" type="button"  value="         スタート         " onClick="bo4();"><!--ボタン-->
+
+
+
+ </div>
+
+
 </html>
+
+
+
