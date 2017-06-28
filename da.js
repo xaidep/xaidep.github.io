@@ -8,14 +8,6 @@ var p; // shortcut to reference prototypes
 
 	// timeline functions:
 	this.frame_0 = function() {
-		btnMc.addEventListener(MouseEvent.CLICK, clickDeNext);
-		
-		 
-		
-		function clickDeNext(event:MouseEvent):void
-		
-		
-		
 		this.btnMc.addEventListener("click",clickDeNext.bind(this));
 		
 		 
