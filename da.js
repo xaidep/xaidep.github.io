@@ -10,6 +10,16 @@ var p; // shortcut to reference prototypes
 	this.frame_0 = function() {
 		btnMc.addEventListener(MouseEvent.CLICK, clickDeNext);
 		
+		 
+		
+		function clickDeNext(event:MouseEvent):void
+		
+		
+		
+		this.btnMc.addEventListener("click",clickDeNext.bind(this));
+		
+		 
+		
 		function clickDeNext(event:MouseEvent):void {
 		sikaku.gotoAndPlay("go");
 		}
