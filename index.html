@@ -16,7 +16,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 	exportRoot = new lib.da();
 
-	stage = new createjs.Stage(canvas);
+    stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
 	stage.enableMouseOver();
@@ -27,7 +27,7 @@ function init() {
 </script>
 </head>
 
-<body onload="init();" style="background-color:#D4D4D4">
+<body button id="btn1" onclick="init(); style="background-color:#D4D4D4">
 	<canvas id="canvas" width="550" height="400" style="background-color:#ffffff"></canvas>
 </body>
 </html>
