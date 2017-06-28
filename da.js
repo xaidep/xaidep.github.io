@@ -13,7 +13,7 @@ var p; // shortcut to reference prototypes
 		
 		
 		function fl_MouseClickHandler(event) {
-			sikaku.gotoAndPlay("go");
+			this.sikaku.gotoAndPlay("go");
 		}
 	}
 
