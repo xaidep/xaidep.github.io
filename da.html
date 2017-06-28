@@ -2,23 +2,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CreateJS export from te</title>
+<title>CreateJS export from da</title>
 
 <script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
 <script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
 <script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
-<script src="te.js"></script>
+<script src="da.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
 
 function init() {
 	canvas = document.getElementById("canvas");
-	exportRoot = new lib.te();
+	exportRoot = new lib.da();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
+	stage.enableMouseOver();
 
 	createjs.Ticker.setFPS(24);
 	createjs.Ticker.addEventListener("tick", stage);
