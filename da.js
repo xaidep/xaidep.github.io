@@ -8,12 +8,12 @@ var p; // shortcut to reference prototypes
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.btnMc.addEventListener("click",clickDeNext.bind(this));
+		this.btnMc.addEventListener("click",fl_MouseClickHandler.bind(this));
 		
-		 
 		
-		function clickDeNext(event:MouseEvent):void {
-		sikaku.gotoAndPlay("go");
+		
+		function fl_MouseClickHandler(event:MouseEvent):void; {
+			sikaku.gotoAndPlay("go");
 		}
 	}
 
